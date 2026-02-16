@@ -162,12 +162,22 @@
             content: "";
             position: absolute;
             inset: 0;
+            background: rgba(55, 55, 55, 0.4);
+            /* capa gris semitransparente */
         }
+
 
         @keyframes zoomOut {
             to {
                 transform: scale(1);
             }
+        }
+
+
+        .white {
+            color: white;
+            /* fondo blanco semitransparente */
+            
         }
 
         /* Contenido */
@@ -917,72 +927,80 @@
 
 
 
-        header { 
-        position: fixed; 
-        top: 0; 
-        left: 0; 
-        right: 0;
-        z-index: 50; 
-        transition: all 0.5s ease; 
-        background: #000; 
-        padding: 20px 0; /* Ajustado para mejor control */
-    } 
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            transition: all 0.5s ease;
+            background: #000;
+            padding: 20px 0;
+            /* Ajustado para mejor control */
+        }
 
-    header.scrolled { 
-        background: rgba(0, 0, 0, 0.95); 
-        backdrop-filter: blur(6px);
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
-        padding: 10px 0; 
-    } 
+        header.scrolled {
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(6px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 10px 0;
+        }
 
-    /* Contenedor centralizado para mantener el alineamiento */
-    header .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-        display: flex;
-        justify-content: space-between; /* LOGO A LA IZQUIERDA, MENÚ A LA DERECHA */
-        align-items: center;
-    }
+        /* Contenedor centralizado para mantener el alineamiento */
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            /* LOGO A LA IZQUIERDA, MENÚ A LA DERECHA */
+            align-items: center;
+        }
 
-    nav { 
-        display: flex; 
-        align-items: center;
-        width: 100%; /* Asegura que ocupe todo el espacio del container */
-        justify-content: space-between; 
-    } 
+        nav {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            /* Asegura que ocupe todo el espacio del container */
+            justify-content: space-between;
+        }
 
-    .logo a {
-        display: flex;
-        align-items: center;
-    }
+        .logo a {
+            display: flex;
+            align-items: center;
+        }
 
-    nav img { 
-        height: 50px; /* Tamaño ajustado para desktop */
-        width: auto; 
-    } 
+        nav img {
+            height: 50px;
+            /* Tamaño ajustado para desktop */
+            width: auto;
+        }
 
-    ul.desktop { 
-        display: none; /* Oculto en móviles */
-        list-style: none; 
-        margin: 0; 
-        padding: 0;
-        gap: 30px; 
-    } 
+        ul.desktop {
+            display: none;
+            /* Oculto en móviles */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+        }
 
-    /* ... (resto del CSS de desktop links) ... */
+        /* ... (resto del CSS de desktop links) ... */
 
-    @media(min-width:768px) { 
-        .menu-btn { display: none; } 
-        ul.desktop { 
-            display: flex; /* Se muestra en desktop */
-        } 
-        .mobile-menu { display: none; } 
-    }
+        @media(min-width:768px) {
+            .menu-btn {
+                display: none;
+            }
 
+            ul.desktop {
+                display: flex;
+                /* Se muestra en desktop */
+            }
 
-
-
+            .mobile-menu {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -990,35 +1008,35 @@
 
 
 
-    <header id="header"> 
-        <div class="container"> 
-            <nav> 
-                <div class="logo"> 
-                    <a href="#home"><img src="logo.jpg" alt="Decobay Interiors"></a> 
-                </div> 
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="#home"><img src="logo.jpg" alt="Decobay Interiors"></a>
+                </div>
 
-                <ul class="desktop"> 
-                    <li><a href="#home">Architectural Designs</a></li> 
-                    <li><a href="#about">Interior Designs</a></li> 
-                    <li><a href="#portfolio">Residential</a></li> 
-                    <li><a href="#services">Services</a></li> 
-                    <li><a href="#contact">Virtual Design</a></li> 
-                    <li><a href="#hikeq">HikeQ</a></li> 
-                </ul> 
+                <ul class="desktop">
+                    <li><a href="#home">Architectural Designs</a></li>
+                    <li><a href="#about">Interior Designs</a></li>
+                    <li><a href="#portfolio">Residential</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Virtual Design</a></li>
+                    <li><a href="#hikeq">HikeQ</a></li>
+                </ul>
 
-                <button class="menu-btn" id="menuBtn">&#9776;</button> 
-            </nav> 
-        </div> 
-        
-        <div class="mobile-menu" id="mobileMenu"> 
-            <ul> 
-                <li><a href="#home">Architectural Designs</a></li> 
-                <li><a href="#about">Interior Designs</a></li> 
-                <li><a href="#portfolio">Residential</a></li> 
-                <li><a href="#services">Services</a></li> 
-                <li><a href="#contact">Virtual Design</a></li> 
-                <li><a href="#hikeq">HikeQ</a></li> 
-            </ul> 
+                <button class="menu-btn" id="menuBtn">&#9776;</button>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#home">Architectural Designs</a></li>
+                <li><a href="#about">Interior Designs</a></li>
+                <li><a href="#portfolio">Residential</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Virtual Design</a></li>
+                <li><a href="#hikeq">HikeQ</a></li>
+            </ul>
         </div>
     </header>
 
@@ -1033,8 +1051,11 @@
         <div class="hero-bg"> <img src="hero-bg.jpg" alt="Elegant living room interior"> </div> <!-- Contenido -->
         <div class="hero-content"> <span>Architectural & Interior Design Firm</span>
             <h1> Elevate Your <br> <span>Living Space</span> </h1>
+            <div class="white">
+
+            
             <p> We create sophisticated, timeless interiors that reflect your unique style and transform your house into
-                a sanctuary of elegance. </p>
+                a sanctuary of elegance. </p></div>
             <div class="hero-buttons"> <a href="#portfolio" class="btn-primary">View Portfolio</a> <a href="#contact"
                     class="btn-outline">Get in Touch</a> </div>
         </div> <!-- Indicador scroll --> <a href="#about" class="scroll-indicator"> <span>⌄</span> </a>
@@ -1231,13 +1252,13 @@
                 <p>Transforming spaces into elegant sanctuaries. Based in California, serving clients nationwide with
                     timeless interior design.</p>
                 <div class="social-links">
-  <a href="#" aria-label="Instagram">
-    <img src="Instagram.jpg" alt="Instagram" style="width:40px; height:40px; border-radius:50%;">
-  </a>
-  <a href="#" aria-label="Facebook">
-    <img src="Facebook.png" alt="Facebook" style="width:40px; height:40px; border-radius:50%;">
-  </a>
-</div>
+                    <a href="#" aria-label="Instagram">
+                        <img src="Instagram.jpg" alt="Instagram" style="width:40px; height:40px; border-radius:50%;">
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <img src="Facebook.png" alt="Facebook" style="width:40px; height:40px; border-radius:50%;">
+                    </a>
+                </div>
 
             </div> <!-- Quick Links -->
             <div>
